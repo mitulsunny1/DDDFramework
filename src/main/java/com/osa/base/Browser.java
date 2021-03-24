@@ -6,8 +6,10 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class Browser {
 public static void main(String[] args) {
-	WebDriver dr=openBrowser("firefox");
+	WebDriver dr=openBrowser("chrome");
+	dr.manage().window().maximize();
 	dr.get("https://www.osaconsultingtech.com");
+	
 }
 public static WebDriver openBrowser(String browser) { 
 	WebDriver dr=null;
