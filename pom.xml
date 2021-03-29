@@ -10,6 +10,15 @@
 	    <groupId>org.seleniumhq.selenium</groupId>
 	    <artifactId>selenium-java</artifactId>
 	    <version>3.141.59</version>
+<<<<<<< HEAD
 	 </dependency>
+=======
+	</dependency>
+	<dependency>
+    <groupId>org.apache.poi</groupId>
+    <artifactId>poi-ooxml</artifactId>
+    <version>3.17</version>
+	</dependency>
+>>>>>>> 59bc2ddfa5d2c4908e43970983331cdc0268095d
   </dependencies>
 </project>
