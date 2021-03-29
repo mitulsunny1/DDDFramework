@@ -7,6 +7,12 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 public class Browser {
 public static WebDriver openBrowser(String browser) { 
 	WebDriver dr=null;
+	if(browser.toLowerCase().equals("chrome")) {
+		System.setProperty("webdriver.chrome.driver", "src\\main\\resources\\drivers\\chromedriver.exe");
+	    dr=new ChromeDriver();
+	}else if(browser.toLowerCase().equals("firefox")) {
+		System.setProperty("webdriver.gecko.driver", "C:\\Users\\ahmed\\Desktop\\OSA0829202010A\\geckodriver.exe");
+		dr=new FirefoxDriver();
 	if(System.getProperty("os.name").toLowerCase().contains("windows")) {
 		System.out.println("===========The test is running on "+System.getProperty("os.name")+"==========");
 		if(browser.toLowerCase().equals("chrome")) {
@@ -26,6 +32,8 @@ public static WebDriver openBrowser(String browser) {
 			dr=new FirefoxDriver();
 		}
 	}
-	return dr;
+
   }
+	return dr;
+}
 }

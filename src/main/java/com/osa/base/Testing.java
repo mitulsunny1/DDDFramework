@@ -16,6 +16,12 @@ public class Testing {
 	@Test
 	public void test2() {
 		System.out.println("Test Two method");
+	
+	}
+	@Test
+	public void test3() {
+		System.out.println("Test Two method");
+	   System.out.println("Hello");
 	}
 	@BeforeClass
 	public void beforeClass() {
