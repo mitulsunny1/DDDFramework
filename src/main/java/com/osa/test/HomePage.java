@@ -28,5 +28,13 @@ public void verifyForumLogin() throws InterruptedException {
 	Thread.sleep(5000);
 	dr.findElement(By.id("login_button")).click();
 }
-
+@Test
+public void verifyStudentPage() {
+	Utils.verifyTitle("Student Page", dr.getTitle());
+}
+@Test
+public void verifyInterviewQuetion() throws InterruptedException {
+	Thread.sleep(5000);
+	dr.findElement(By.xpath("//a[text()='Interview Questiones']")).click();
+}
 }
