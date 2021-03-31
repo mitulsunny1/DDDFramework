@@ -9,7 +9,7 @@ public class Base {
 public WebDriver dr;
 @BeforeClass
 public void beforeClass() {
-	dr= Browser.openBrowser("chrome");
+	dr= Browser.openBrowser("firefox");
 }
 @BeforeMethod
 public void beforeMethod() {

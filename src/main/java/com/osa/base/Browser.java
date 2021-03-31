@@ -13,7 +13,7 @@ public static WebDriver openBrowser(String browser) {
 			System.setProperty("webdriver.chrome.driver", "src\\main\\resources\\drivers\\win\\chromedriver.exe");
 		    dr=new ChromeDriver();
 		}else if(browser.toLowerCase().equals("firefox")) {
-			System.setProperty("", "");
+			System.setProperty("webdriver.gecko.driver", "src\\main\\resources\\drivers\\geckodriver.exe");
 			dr=new FirefoxDriver();
 		}
 	}else {
@@ -22,7 +22,7 @@ public static WebDriver openBrowser(String browser) {
 			System.setProperty("webdriver.chrome.driver", "src/main/resources/drivers/mac/chromedriver");
 		    dr=new ChromeDriver();
 		}else if(browser.toLowerCase().equals("firefox")) {
-			System.setProperty("", "");
+			System.setProperty("webdriver.gecko.driver", "src/main/resources/drivers/geckodriver.exe");
 			dr=new FirefoxDriver();
 		}
 	}
