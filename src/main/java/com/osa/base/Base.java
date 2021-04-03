@@ -10,11 +10,11 @@ public class Base {
 public WebDriver dr;
 
 public void beforeClass() {
-	dr= Browser.openBrowser("chrome");
+	dr= Browser.openBrowser("firefox");
 }
 @BeforeMethod
 public void beforeMethod() {
-	dr= Browser.openBrowser("chrome");
+	dr= Browser.openBrowser("firefox");
 	dr.get("https://www.osaconsultingtech.com");
 }
 @AfterMethod
