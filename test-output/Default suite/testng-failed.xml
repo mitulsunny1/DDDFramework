@@ -3,13 +3,15 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.osa.test.StudentPage">
+      <class name="com.osa.test.HomePage">
         <methods>
+          <include name="verifyHomePageTitle"/>
           <include name="afterClass"/>
-          <include name="verifyStudentPage"/>
+          <include name="verifyForumPageTitle"/>
+          <include name="verifyForumLogin"/>
           <include name="beforeMethod"/>
         </methods>
-      </class> <!-- com.osa.test.StudentPage -->
+      </class> <!-- com.osa.test.HomePage -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

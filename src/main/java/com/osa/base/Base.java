@@ -5,16 +5,18 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Parameters;
 
 public class Base {
 public WebDriver dr;
 
-public void beforeClass() {
-	dr= Browser.openBrowser("chrome");
-}
+//public void beforeClass() {
+//	dr= Browser.openBrowser("firefox");
+//}
 @BeforeMethod
-public void beforeMethod() {
-	dr= Browser.openBrowser("chrome");
+@Parameters("browser")
+public void beforeMethod(String browser) {
+	dr= Browser.openBrowser(browser);
 	dr.get("https://www.osaconsultingtech.com");
 }
 @AfterMethod
