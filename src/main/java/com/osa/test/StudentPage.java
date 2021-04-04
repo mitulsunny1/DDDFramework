@@ -1,8 +1,5 @@
 package com.osa.test;
 
-
-import javax.swing.text.Utilities;
-
 import org.openqa.selenium.By;
 import org.testng.annotations.Test;
 
