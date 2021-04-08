@@ -8,7 +8,7 @@ public class Browser {
 public static WebDriver openBrowser(String browser) { 
 	WebDriver dr=null;
 	if(System.getProperty("os.name").toLowerCase().contains("windows")) {
-		System.out.println("===========The test is running on "+System.getProperty("os.name")+"==========");
+		
 		if(browser.toLowerCase().equals("chrome")) {
 			System.setProperty("webdriver.chrome.driver", "src\\main\\resources\\drivers\\win\\chromedriver.exe");
 		    dr=new ChromeDriver();
