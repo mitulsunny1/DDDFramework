@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" name="Chrome(failed)">
+<suite parallel="tests" name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <parameter name="browser" value="chrome"/>
+  <test thread-count="5" parallel="tests" name="ChromeTest(failed)">
     <parameter name="browser" value="chrome"/>
     <classes>
       <class name="com.osa.test.StudentPage">
@@ -9,33 +10,10 @@
           <include name="beforeSuite"/>
           <include name="afterClass"/>
           <include name="afterSuite"/>
-          <include name="verifyStudentPage"/>
-          <include name="beforeMethod"/>
-        </methods>
-      </class> <!-- com.osa.test.StudentPage -->
-      <class name="com.osa.test.HomePage">
-        <methods>
-          <include name="beforeSuite"/>
-          <include name="afterClass"/>
-          <include name="afterSuite"/>
-          <include name="verifyForumPageTitle"/>
-          <include name="beforeMethod"/>
-        </methods>
-      </class> <!-- com.osa.test.HomePage -->
-    </classes>
-  </test> <!-- Chrome(failed) -->
-  <test thread-count="5" name="Firefox(failed)">
-    <parameter name="browser" value="firefox"/>
-    <classes>
-      <class name="com.osa.test.StudentPage">
-        <methods>
-          <include name="beforeSuite"/>
-          <include name="afterClass"/>
-          <include name="afterSuite"/>
-          <include name="verifyStudentPage"/>
+          <include name="verifyStudentPage" invocation-numbers="0"/>
           <include name="beforeMethod"/>
         </methods>
       </class> <!-- com.osa.test.StudentPage -->
     </classes>
-  </test> <!-- Firefox(failed) -->
+  </test> <!-- ChromeTest(failed) -->
 </suite> <!-- Failed suite [Suite] -->

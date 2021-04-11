@@ -15,7 +15,7 @@ public class FileManager {
 public static void main(String[] args) {
 
 	
-	Object data[][]=readExcelFile("src\\test\\resources\\Book1.xlsx","TestData");
+	Object data[][]=readExcelFile("src\\test\\resources\\test.xlsx","Sheet1");
 	for (int i=1; i<data.length; i++) {
 	for(int j=0; j<data[i].length; j++) {
 		System.out.println(data[i][j]);
