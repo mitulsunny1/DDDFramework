@@ -16,7 +16,7 @@
       </class>
     </classes>
   </test> <!-- Test -->
-    <test thread-count="5" name="Firefox">
+    <test name="Firefox">
   <parameter name="browser" value="firefox"/>
     <classes>
       <class name="com.osa.test.HomePage">
