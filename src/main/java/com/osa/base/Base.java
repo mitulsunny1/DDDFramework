@@ -18,20 +18,22 @@ public WebDriver dr;
 //}
 @BeforeSuite
 public void beforeSuite() {
-	System.out.println("===========The test is running on "+System.getProperty("os.name")+"==========");
+	AppConfig.LOG.info("===========The test is running on "+System.getProperty("os.name")+"==========");
 }
 @AfterSuite
 public void afterSuite() {
-	System.out.println("********All the Test is executed and send the reports to the email**********");
+	AppConfig.LOG.info("********All the Test is executed and send the reports to the email**********");
 }
 @BeforeMethod
 @Parameters("browser")
 public void beforeMethod(String browser) {
 	dr= Browser.openBrowser(browser);
+	AppConfig.LOG.info("Test is running on "+ browser);
 	dr.get("https://www.osaconsultingtech.com");
 }
 @AfterMethod
 public void afterClass() {
+	AppConfig.LOG.info("Closing the browser!");
 	dr.close();
 }
 
