@@ -5,15 +5,16 @@
   <test thread-count="5" parallel="tests" name="ChromeTest(failed)">
     <parameter name="browser" value="chrome"/>
     <classes>
-      <class name="com.osa.test.StudentPage">
+      <class name="com.osa.test.HomePage">
         <methods>
           <include name="beforeSuite"/>
           <include name="afterClass"/>
           <include name="afterSuite"/>
-          <include name="verifyStudentPage" invocation-numbers="0"/>
+          <include name="verifyForumPageTitle"/>
+          <include name="verifyForumLogin"/>
           <include name="beforeMethod"/>
         </methods>
-      </class> <!-- com.osa.test.StudentPage -->
+      </class> <!-- com.osa.test.HomePage -->
     </classes>
   </test> <!-- ChromeTest(failed) -->
 </suite> <!-- Failed suite [Suite] -->

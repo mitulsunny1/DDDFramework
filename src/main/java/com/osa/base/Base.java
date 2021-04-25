@@ -1,6 +1,7 @@
 package com.osa.base;
 
 import org.openqa.selenium.WebDriver;
+import org.testng.ITestContext;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
@@ -26,10 +27,11 @@ public void afterSuite() {
 }
 @BeforeMethod
 @Parameters("browser")
-public void beforeMethod(String browser) {
+public void beforeMethod(String browser, ITestContext context) {
 	dr= Browser.openBrowser(browser);
 	AppConfig.LOG.info("Test is running on "+ browser);
 	dr.get("https://www.osaconsultingtech.com");
+	context.setAttribute("webDriver", dr);
 }
 @AfterMethod
 public void afterClass() {

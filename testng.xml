@@ -5,7 +5,7 @@
    <test thread-count="5" name="ChromeTest">
   	<parameter name="browser" value="chrome"/>
     <classes>
-      <class name="com.osa.test.StudentPage"/>
+      <class name="com.osa.test.HomePage"/>
     </classes>
   </test> 
 </suite> 
