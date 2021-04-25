@@ -16,6 +16,7 @@ public static WebDriver openBrowser(String browser) {
 			System.setProperty("webdriver.gecko.driver", "src\\main\\resources\\drivers\\win\\geckodriver.exe");
 			dr=new FirefoxDriver();
 		}
+		dr.manage().window().maximize();
 	}else {
 		System.out.println("===========The test is running on "+System.getProperty("os.name")+"==========");
 		if(browser.toLowerCase().equals("chrome")) {

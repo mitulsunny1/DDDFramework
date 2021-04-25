@@ -15,22 +15,18 @@ import com.osa.base.Browser;
 import com.osa.fiels.FileManager;
 
 public class Utils {
-	public static void main(String[] args) throws InterruptedException {
-		WebDriver dr=Browser.openBrowser("chrome");
-		dr.get("https://www.osaconsultingtech.com");
-		Thread.sleep(5000);
-		takeScreenshot(dr);
-		Thread.sleep(5000);
-		dr.close();
-	}
-	
-	public static void takeScreenshot(WebDriver dr) {
+	static Logger log=Utils.getLog(Utils.class);
+	public static void takeScreenshot(WebDriver dr,String methodName) {
 		try {
 //			FileUtils.copyFile(((TakesScreenshot)dr).getScreenshotAs(OutputType.FILE),
 //			new File(System.getProperty("user.dir")+"\\target\\image\\"+System.currentTimeMillis()+"picture.png"));
 			TakesScreenshot screenShot=((TakesScreenshot)dr);
 			File srcFile=screenShot.getScreenshotAs(OutputType.FILE);
-			File desFile=new File(System.getProperty("user.dir")+"\\target\\image\\"+System.currentTimeMillis()+"picture.png");
+			String name=methodName+System.currentTimeMillis();
+			log.info("==================Look here======================");
+			log.info("The test case is faile and we are going to take screenshot.");
+			log.info("Look for image name "+ name);
+			File desFile=new File(System.getProperty("user.dir")+"\\target\\image\\"+name+".png");
 			FileUtils.copyFile(srcFile,desFile);
 		}catch(Exception e) {
 			System.out.println(e.getMessage());
@@ -39,9 +35,11 @@ public class Utils {
 
 	public static void verifyTitle(String expected, String actual) {
 		if(expected.equals(actual)) {
-			System.out.println("The test is Passed");
+			log.info("The test is Passed");
 		}else {
-			System.out.println("The test is Failed");
+			log.info("The test is Failed");
+			log.info("The expected value is :"+expected);
+			log.info("The actual value is :"+actual);
 			Assert.assertEquals(actual,expected);
 		}
 	}
