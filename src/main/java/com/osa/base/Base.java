@@ -14,9 +14,6 @@ import org.testng.annotations.Parameters;
 public class Base {
 public WebDriver dr;
 
-//public void beforeClass() {
-//	dr= Browser.openBrowser("firefox");
-//}
 @BeforeSuite
 public void beforeSuite() {
 	AppConfig.LOG.info("===========The test is running on "+System.getProperty("os.name")+"==========");

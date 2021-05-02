@@ -10,7 +10,6 @@
           <include name="beforeSuite"/>
           <include name="afterClass"/>
           <include name="afterSuite"/>
-          <include name="verifyForumPageTitle"/>
           <include name="verifyForumLogin"/>
           <include name="beforeMethod"/>
         </methods>
